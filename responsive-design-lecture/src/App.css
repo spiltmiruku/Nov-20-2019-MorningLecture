@@ -1,0 +1,93 @@
+.App {
+  text-align: center;
+}
+
+#header-container {
+  height: 75px;
+  background-color: powderblue;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 0px 15px;
+}
+
+#logo {
+  height: 300px;
+}
+
+#nav-links {
+  color: darkslateblue;
+  width: 30vw;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#hamburger {
+  display: none;
+}
+
+#transition-box {
+  height: 75px;
+  width: 100%;
+  background-color: palegoldenrod;
+  transition: 5s;
+}
+
+#transition-box:hover {
+  transform: scale(2)
+}
+
+#rotate-box {
+  height: 55px;
+  width: 70px;
+  border-radius: 50%;
+  background-color: plum;
+  animation-name: spin;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  padding-left: 500px;
+}
+
+@keyframes spin {
+  /* from{
+    transform: rotate(0deg)
+  }
+  to {
+    transform: rotate(360deg)
+  } */
+0% {
+  transform: rotate(0deg)
+}
+50% {
+  transform: rotate(180deg);
+  height: 10px;
+  width: 150px;
+}
+100% {
+  transform: rotate(360deg);
+  height: 75px;
+  width: 75px;
+}
+
+}
+
+@media (max-width: 750px) {
+  #nav-links {
+    display: none;
+  }
+  #hamburger {
+    display: initial;
+    color: darkslateblue
+  }
+}
+
+@media (max-width: 500px) {
+  #header-container {
+    height: 60px;
+  }
+  #logo {
+    height: 70px;
+  }
+}

@@ -1,0 +1,92 @@
+.App {
+  text-align: center;
+}
+
+#header-container {
+  height: 75px;
+  background-color: purple;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 0px 15px;
+}
+
+#logo {
+  height: 50px;
+  animation-name: spin;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+#nav-links {
+  color: white;
+  width: 30vw;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#hamburger {
+  display: none;
+  color: white;
+}
+
+#transition-box {
+  height: 75px;
+  width: 75px;
+  background-color: red;
+  transition: 5s;
+}
+
+#transition-box:hover {
+  transform: scale(2)
+}
+
+#rotate-box {
+  height: 75px;
+  width: 75px;
+  background-color: rebeccapurple;
+  animation-name: spin;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+/* @keyframes spin {
+  from {
+    transform: rotate(0deg)
+  }
+  to {
+    transform: rotate(360deg)
+  }
+  0% {
+    transform: rotate(0deg)
+  }
+  50% {
+    transform: rotate(180deg);
+    height: 150px;
+    width: 150px;
+  }
+  100% {
+    transform: rotate(360deg);
+    height: 75px;
+    width: 75px;
+  }
+} */
+
+@media (max-width: 750px){
+  #nav-links {
+    display: none;
+  }
+
+  #hamburger {
+    display: initial;
+  }
+}
+
+@media (max-width: 500px){
+  #header-container {
+    height: 60px;
+  }
+}
