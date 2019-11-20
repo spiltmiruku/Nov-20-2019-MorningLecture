@@ -24,26 +24,26 @@ class App extends Component {
       <div className="App">
         {!this.state.toggleMenu
           ? (<header id='header-container'>
-              <img src='https://i.kym-cdn.com/photos/images/newsfeed/001/244/ 967/9fb.png' alt='handsome-squidward' id='logo'/>
+              <img src='https://i.kym-cdn.com/photos/images/newsfeed/001/244/967/9fb.png' alt='handsome-squidward' id='logo'/>
               <nav id='nav-links'>
                 <a>Home</a>
                 <a>About</a>
                 <a>Contact</a>
               </nav>
-              <FontAwesomeIcon icon="bars" id='hamburger' onClick={}/>
+              <FontAwesomeIcon icon="bars" id='hamburger' onClick={this.handleToggle}/>
             </header>)
           : (
           <>
           <header id='header-container'>
-              <img src='https://i.kym-cdn.com/photos/images/newsfeed/001/244/ 967/9fb.png' alt='handsome-squidward' id='logo'/>
+              <img src='https://i.kym-cdn.com/photos/images/newsfeed/001/244/967/9fb.png' alt='handsome-squidward' id='logo'/>
               <nav id='nav-links'>
                 <a>Home</a>
                 <a>About</a>
                 <a>Contact</a>
               </nav>
-              <FontAwesomeIcon icon="bars" id='hamburger'/>
+              <FontAwesomeIcon icon="bars" id='hamburger' onClick={this.handleToggle}/>
             </header>
-            <nav>
+            <nav id='side-menu'>
               <a>Home</a>
               <a>About</a>
               <a>Contact</a>

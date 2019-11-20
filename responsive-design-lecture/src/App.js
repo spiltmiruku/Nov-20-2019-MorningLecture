@@ -30,7 +30,7 @@ class App extends Component {
           <a>About</a>
           <a>Contact</a>
         </nav>
-        <FontAwesomeIcon icon='bars' id='hamburger'/>
+        <FontAwesomeIcon icon='bars' id='hamburger' onClick={this.handleToggle}/>
       </header>)
         : (
         <>
@@ -41,17 +41,15 @@ class App extends Component {
           <a>About</a>
           <a>Contact</a>
         </nav>
-        <FontAwesomeIcon icon='bars' id='hamburger'/>
+        <FontAwesomeIcon icon='bars' id='hamburger' onClick={this.handleToggle}/>
         </header>
-        <nav>
+        <nav id='side-menu'>
           <a>Home</a>
           <a>About</a>
           <a>Contact</a>
         </nav>
         </>
         )}
-
-
       <div id="rotate-box"></div>
       <div id="transition-box"></div>
     </div>
